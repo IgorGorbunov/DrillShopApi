@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using DrillShopApi.Models.DTO;
 using DAL.Mocks;
-using Services.Interfaces;
+using DrillShopApi.Services.Interfaces;
 using AutoMapper;
 
-namespace Services.Services
+namespace DrillShopApi.Services.Services
 {
     // <summary>
     /// Сервис для работы с данными о сверлах.
     /// </summary>
-    class DrillService : IDrillService
+    public class DrillService : IDrillService
     {
 
         private readonly IMapper _mapper;

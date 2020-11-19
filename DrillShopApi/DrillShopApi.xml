@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrillShopApi</name>
+    </assembly>
+    <members>
+        <member name="T:DrillShopApi.Common.Swagger.SwaggerConfiguration">
+            <summary>
+            Расширения для конфигурации Swagger.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Common.Swagger.SwaggerConfiguration.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Настройка документов Swagger.
+            </summary>
+            <param name="services">Коллекция сервисов для DI.</param>
+        </member>
+        <member name="T:DrillShopApi.Common.Swagger.SwaggerDocParts">
+            <summary>
+            Константы для указания частей API в Swagger.
+            </summary>
+        </member>
+        <member name="F:DrillShopApi.Common.Swagger.SwaggerDocParts.Drills">
+            <summary>
+            Константа для swagger-документа "Сверла".
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Controllers.DrillsController">
+            <summary>
+            Контроллер для работы с данными о сверлах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.#ctor(DrillShopApi.Services.Interfaces.IDrillService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.DrillsController})">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.DrillsController"/>
+            </summary>
+            <param name="drillService">Сервис сверл</param>
+            <param name="logger">Логгер</param>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.Get">
+            <summary>
+            Получение перечня доступных в магазине сверл.
+            </summary>
+            <returns>Коллекция сущностей "Сверло".</returns>
+        </member>
+    </members>
+</doc>

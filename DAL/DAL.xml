@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DAL</name>
+    </assembly>
+    <members>
+        <member name="T:DrillShopApi.DAL.Domain.Drill">
+            <summary>
+            Сверло
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.Id">
+            <summary>
+            Идентификатор записи
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.ArtCode">
+            <summary>
+            Артикул
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.Description">
+            <summary>
+            Описание
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.Weight">
+            <summary>
+            Вес
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.MinDiametr">
+            <summary>
+            Минимальный диаметр
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.MaxDiametr">
+            <summary>
+            Максимальный диаметр
+            </summary>
+        </member>
+        <member name="T:DAL.Mocks.DrillMock">
+            <summary>
+            Mock для коллекции сущностей "Сверло"
+            </summary>
+        </member>
+        <member name="M:DAL.Mocks.DrillMock.GetDrill">
+            <summary>
+            Получение коллекции сущности "Сверло"
+            </summary>
+            <returns>Коллекция сущностей "Сверло"</returns>
+        </member>
+    </members>
+</doc>

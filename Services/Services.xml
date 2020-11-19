@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Services</name>
+    </assembly>
+    <members>
+        <member name="T:DrillShopApi.Services.Bootstrap.ServicesConfiguration">
+            <summary>
+            Методы расширения для конфигурации сервисов.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Bootstrap.ServicesConfiguration.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Конфигурация сервисов.
+            </summary>
+            <param name="services">Коллекция сервисов из Startup.</param>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IDrillService">
+            <summary>
+            Интерфейс сервиса для работы с данными о сверлах.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DrillShopApi.Services.Services.DrillService" -->
+        <member name="M:DrillShopApi.Services.Services.DrillService.GetAsync">
+            <inheritdoc cref="T:DrillShopApi.Services.Interfaces.IDrillService"/>
+        </member>
+        <member name="T:Services.Mappings.DrillPofile">
+            <summary>
+            Профиль маппинга (сверла)
+            </summary>
+        </member>
+        <member name="M:Services.Mappings.DrillPofile.#ctor">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.DrillPofile"/>
+            </summary>
+        </member>
+    </members>
+</doc>

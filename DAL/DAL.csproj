@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Users\IGorbunov\Dropbox\_Work\_развитие\course\simbirsoft .net\lessonTask\DrillShopApi\DAL\DAL.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

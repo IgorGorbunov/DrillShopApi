@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Models</name>
+    </assembly>
+    <members>
+        <member name="T:DrillShopApi.Models.DTO.DrillDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.Drill"/>
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.ArtCode">
+            <summary>
+            Артикул
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.Description">
+            <summary>
+            Описание
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.Weight">
+            <summary>
+            Вес
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.MinDiametr">
+            <summary>
+            Минимальный диаметр
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.MaxDiametr">
+            <summary>
+            Максимальный диаметр
+            </summary>
+        </member>
+    </members>
+</doc>

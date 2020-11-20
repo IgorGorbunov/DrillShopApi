@@ -6,14 +6,14 @@ using System.Text;
 namespace DAL.Mocks
 {
     /// <summary>
-    /// Mock для коллекции сущностей "Сверло"
+    /// Mock для коллекции сущностей "Сверло".
     /// </summary>
     public static class DrillMock
     {
         /// <summary>
-        /// Получение коллекции сущности "Сверло"
+        /// Получение коллекции сущности "Сверло".
         /// </summary>
-        /// <returns>Коллекция сущностей "Сверло"</returns>
+        /// <returns>Коллекция сущностей "Сверло".</returns>
         public static IEnumerable<Drill> GetDrill()
         {
             return new List<Drill> {

@@ -19,12 +19,6 @@ namespace DrillShopApi.Common.Swagger
                 c.DocumentName = SwaggerDocParts.Drills;
                 c.ApiGroupNames = new[] { SwaggerDocParts.Drills };
                 c.GenerateXmlObjects = true;
-            })
-            .AddSwaggerDocument(c =>
-            {
-                c.Title = "Version 2";
-                c.DocumentName = "v2";
-                c.ApiGroupNames = new[] { "v2" };
             });
         }
     }

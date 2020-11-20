@@ -3,37 +3,37 @@
 namespace DrillShopApi.DAL.Domain
 {
     /// <summary>
-    /// Сверло
+    /// Сверло.
     /// </summary>
     public class Drill
     {
         /// <summary>
-        /// Идентификатор записи
+        /// Идентификатор записи.
         /// </summary>
         public long Id { get; set; }
 
         /// <summary>
-        /// Артикул
+        /// Артикул.
         /// </summary>
         public string ArtCode { get; set; }
 
         /// <summary>
-        /// Описание
+        /// Описание.
         /// </summary>
         public string Description { get; set; }
         
         /// <summary>
-        /// Вес
+        /// Вес.
         /// </summary>
         public double Weight { get; set; }
 
         /// <summary>
-        /// Минимальный диаметр
+        /// Минимальный диаметр.
         /// </summary>
         public double MinDiametr { get; set; }
 
         /// <summary>
-        /// Максимальный диаметр
+        /// Максимальный диаметр.
         /// </summary>
         public double MaxDiametr { get; set; }
     }

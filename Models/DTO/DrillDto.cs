@@ -4,36 +4,36 @@ using System.ComponentModel.DataAnnotations;
 namespace DrillShopApi.Models.DTO
 {
     /// <summary>
-    /// DTO для <see cref="Drill"/>
+    /// DTO для <see cref="Drill"/>.
     /// </summary>
     public class DrillDto
     {
         /// <summary>
-        /// Артикул
+        /// Артикул.
         /// </summary>
         [Required]
         public string ArtCode { get; set; }
 
         /// <summary>
-        /// Описание
+        /// Описание.
         /// </summary>
         [MaxLength(2000)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Вес
+        /// Вес.
         /// </summary>
         [Required]
         public double Weight { get; set; }
 
         /// <summary>
-        /// Минимальный диаметр
+        /// Минимальный диаметр.
         /// </summary>
         [Required]
         public double MinDiametr { get; set; }
 
         /// <summary>
-        /// Максимальный диаметр
+        /// Максимальный диаметр.
         /// </summary>
         [Required]
         public double MaxDiametr { get; set; }

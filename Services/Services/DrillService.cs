@@ -21,7 +21,7 @@ namespace DrillShopApi.Services.Services
             _mapper = mapper;
         }
 
-        /// <inheritdoc cref="IDrillService"/>
+        /// <inheritdoc cref="IDrillService"/>.
         public IEnumerable<DrillDto> GetAsync()
         {
             var dresses = DrillMock.GetDrill();

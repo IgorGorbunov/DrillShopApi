@@ -21,10 +21,10 @@ namespace DrillShopApi.Controllers
         private readonly IDrillService _drillService;
 
         /// <summary>
-        /// Инициализирует экземпляр <see cref="DrillsController"/>
+        /// Инициализирует экземпляр <see cref="DrillsController"/>.
         /// </summary>
-        /// <param name="drillService">Сервис сверл</param>
-        /// <param name="logger">Логгер</param>
+        /// <param name="drillService">Сервис сверл.</param>
+        /// <param name="logger">Логгер.</param>
         public DrillsController(IDrillService drillService, ILogger<DrillsController> logger)
         {
             _drillService = drillService;

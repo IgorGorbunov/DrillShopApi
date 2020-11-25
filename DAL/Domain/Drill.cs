@@ -36,5 +36,25 @@ namespace DrillShopApi.DAL.Domain
         /// Максимальный диаметр.
         /// </summary>
         public double MaxDiametr { get; set; }
+
+        /// <summary>
+        /// Атрибут удаления.
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
+        /// <summary>
+        /// Дата создания.
+        /// </summary>
+        public DateTime Created { get; set; }
+
+        /// <summary>
+        /// Дата изменения.
+        /// </summary>
+        public DateTime Modified { get; set; }
+
+        /// <summary>
+        /// Дата удаления.
+        /// </summary>
+        public DateTime Deleted { get; set; }
     }
 }

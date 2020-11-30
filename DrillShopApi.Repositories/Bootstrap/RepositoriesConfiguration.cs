@@ -9,7 +9,7 @@ namespace DrillShopApi.Repositories.Bootstrap
     {
         public static void ConfigureRepositories (this IServiceCollection services)
         {
-            services.AddScoped<>
+            //services.AddScoped<IDrillRepository, DrillRepository>();
         }
     }
 }

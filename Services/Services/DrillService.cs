@@ -43,7 +43,7 @@ namespace DrillShopApi.Services.Services
                 Name = "BOSCH",
                 Address = "ул. Ленина, д. 3",
                 City = "Ульяновск",
-                Created = DateTime.Now,
+                CreatedDateTimeOffset = DateTime.Now,
                 IsDeleted = false
             };
 
@@ -57,7 +57,7 @@ namespace DrillShopApi.Services.Services
                 MaxDiametr = 20.0,
                 MinDiametr = 1.2,
                 Provider = provider,
-                Created = DateTime.Now,
+                CreatedDateTimeOffset = DateTime.Now,
                 IsDeleted = false,
                 Weight = 0.01
             };
@@ -67,7 +67,7 @@ namespace DrillShopApi.Services.Services
                 Name = "Мир инструмента",
                 Address = "ул. Ленина, д. 31",
                 City = "Ульяновск",
-                Created = DateTime.Now,
+                CreatedDateTimeOffset = DateTime.Now,
                 IsDeleted = false,
                 Telephone = "8 800 00 00 00"
             };
@@ -77,7 +77,7 @@ namespace DrillShopApi.Services.Services
                 Name = "Cклад №1",
                 Address = "ул. Ленина, д. 32",
                 City = "Ульяновск",
-                Created = DateTime.Now,
+                CreatedDateTimeOffset = DateTime.Now,
                 IsDeleted = false,
                 Area = 100,
                 Capacity = 40000

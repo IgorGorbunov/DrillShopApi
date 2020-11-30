@@ -14,7 +14,7 @@ namespace Services.Mappings
         /// </summary>
         public WarehouseProfile()
         {
-            CreateMap<Warehouse, WarehouseDto>();
+            CreateMap<Warehouse, WarehouseDto>().ReverseMap();
         }
     }
 }

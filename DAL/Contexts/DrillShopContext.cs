@@ -44,8 +44,8 @@ namespace DrillShopApi.DAL.Contexts
         /// <param name="options">Опции для конфигурации контекста.</param>
         public DrillShopContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
     }
 }

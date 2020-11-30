@@ -6,7 +6,7 @@ namespace DrillShopApi.Models.DTO
     /// <summary>
     /// DTO для <see cref="WHAvailability"/>.
     /// </summary>
-    public class WHAvailabilityDto
+    public class WHAvailabilityDto : BaseDto
     {
         /// <summary>
         /// Количество доступных единиц.

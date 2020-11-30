@@ -40,7 +40,7 @@ namespace DrillShopApi.Controllers
         public IActionResult Get()
         {
             _logger.LogInformation("Drills/Get was requested.");
-            var response = _drillService.GetAsync();
+            var response = _drillService.Get();
             return Ok(response);
         }
     }

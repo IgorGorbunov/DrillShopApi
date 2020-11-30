@@ -10,7 +10,7 @@ namespace DrillShopApi.Services.Interfaces
     /// </summary>
     public interface IDrillService
     {
-        IEnumerable<DrillDto> GetAsync();
+        IEnumerable<DrillDto> Get();
     }
 
 }

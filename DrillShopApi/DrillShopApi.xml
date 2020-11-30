@@ -32,10 +32,10 @@
         </member>
         <member name="M:DrillShopApi.Controllers.DrillsController.#ctor(DrillShopApi.Services.Interfaces.IDrillService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.DrillsController})">
             <summary>
-            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.DrillsController"/>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.DrillsController"/>.
             </summary>
-            <param name="drillService">Сервис сверл</param>
-            <param name="logger">Логгер</param>
+            <param name="drillService">Сервис сверл.</param>
+            <param name="logger">Логгер.</param>
         </member>
         <member name="M:DrillShopApi.Controllers.DrillsController.Get">
             <summary>

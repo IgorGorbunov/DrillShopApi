@@ -8,23 +8,23 @@ using System.Threading;
 namespace DrillShopApi.Services.Services
 {
     /// <summary>
-    /// Сервис для работы с данными о сверлах.
+    /// Сервис для работы с данными об магазине.
     /// </summary>
-    public class DrillService : IDrillService
+    public class ShopService : IShopService
     {
-        private readonly IDrillRepository _repository;
+        private readonly IShopRepository _repository;
 
         /// <summary>
-        /// Инициализирует экземпляр <see cref="DrillService"/>.
+        /// Инициализирует экземпляр <see cref="ShopService"/>.
         /// </summary>
         /// <param name="repository">Репозиторий.</param>
-        public DrillService(IDrillRepository repository)
+        public ShopService(IShopRepository repository)
         {
             _repository = repository;
         }
 
         ///<inheritdoc cref="ICreatable{TDto}.CreateAsync(TDto)"/>
-        public async Task<DrillDto> CreateAsync(DrillDto dto)
+        public async Task<ShopDto> CreateAsync(ShopDto dto)
         {
             return await _repository.CreateAsync(dto);
         }
@@ -36,22 +36,21 @@ namespace DrillShopApi.Services.Services
         }
 
         /// <inheritdoc cref="IGettableById{TDto}.GetAsync(long, CancellationToken)"/>
-        public async Task<DrillDto> GetAsync(long id, CancellationToken token = default)
+        public async Task<ShopDto> GetAsync(long id, CancellationToken token = default)
         {
             return await _repository.GetAsync(id);
         }
 
         /// <inheritdoc cref="IGettable{TDto}.GetAsync(CancellationToken)"/>
-        public async Task<IEnumerable<DrillDto>> GetAsync(CancellationToken token = default)
+        public async Task<IEnumerable<ShopDto>> GetAsync(CancellationToken token = default)
         {
             return await _repository.GetAsync();
         }
 
         /// <inheritdoc cref="IUpdatable{TDto}.UpdateAsync(TDto)"/>
-        public async Task<DrillDto> UpdateAsync(DrillDto dto)
+        public async Task<ShopDto> UpdateAsync(ShopDto dto)
         {
             return await _repository.UpdateAsync(dto);
         }
-
     }
 }

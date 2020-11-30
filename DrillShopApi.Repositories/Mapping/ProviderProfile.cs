@@ -14,7 +14,7 @@ namespace Services.Mappings
         /// </summary>
         public ProviderProfile()
         {
-            CreateMap<Provider, ProviderDto>();
+            CreateMap<Provider, ProviderDto>().ReverseMap();
         }
     }
 }

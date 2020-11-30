@@ -6,7 +6,7 @@ namespace DrillShopApi.Models.DTO
     /// <summary>
     /// DTO для <see cref="ShopAvailability"/>.
     /// </summary>
-    public class ShopAvailabilityDto
+    public class ShopAvailabilityDto : BaseDto
     {
         /// <summary>
         /// Количество доступных единиц.

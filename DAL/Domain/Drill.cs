@@ -7,7 +7,7 @@ namespace DrillShopApi.DAL.Domain
     /// <summary>
     /// Сверло.
     /// </summary>
-    public class Drill : BaseStructEntity
+    public class Drill : BaseDimEntity
     {
         /// <summary>
         /// Артикул.

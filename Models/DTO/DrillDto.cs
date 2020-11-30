@@ -6,7 +6,7 @@ namespace DrillShopApi.Models.DTO
     /// <summary>
     /// DTO для <see cref="Drill"/>.
     /// </summary>
-    public class DrillDto
+    public class DrillDto : BaseDto
     {
         /// <summary>
         /// Артикул.

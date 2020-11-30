@@ -14,7 +14,7 @@ namespace Services.Mappings
         /// </summary>
         public ShopProfile()
         {
-            CreateMap<Shop, ShopDto>();
+            CreateMap<Shop, ShopDto>().ReverseMap();
         }
     }
 }

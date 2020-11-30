@@ -4,51 +4,254 @@
         <name>DAL</name>
     </assembly>
     <members>
-        <member name="T:DrillShopApi.DAL.Domain.Drill">
+        <member name="T:DrillShopApi.DAL.Bootstrap.DbConfigurations">
             <summary>
-            Сверло
+            Конфигурации БД.
             </summary>
         </member>
-        <member name="P:DrillShopApi.DAL.Domain.Drill.Id">
+        <member name="M:DrillShopApi.DAL.Bootstrap.DbConfigurations.ConfigureDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
-            Идентификатор записи
+            Подключение DbContext.
+            </summary>
+            <param name="services">Коллекция сервисов.</param>
+            <param name="configuration">Конфигурация.</param>
+        </member>
+        <member name="T:DrillShopApi.DAL.Contexts.DrillShopContext">
+            <summary>
+            Контекст для работы с данными БД "Магазины сверл".
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.Shops">
+            <summary>
+            Магазины.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.Providers">
+            <summary>
+            Поставщики.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.Warehouses">
+            <summary>
+            Склады.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.Drills">
+            <summary>
+            Сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.ShopAvailabilities">
+            <summary>
+            Наличие в магазинах.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Contexts.DrillShopContext.WHAvailabilities">
+            <summary>
+            Наличие на складах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.DAL.Contexts.DrillShopContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.DAL.Contexts.DrillShopContext"/>.
+            </summary>
+            <param name="options">Опции для конфигурации контекста.</param>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.BaseEntity">
+            <summary>
+            Базовый класс для доменных моделей.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseEntity.Id">
+            <summary>
+            Идентификатор записи.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.BaseStructEntity">
+            <summary>
+            Базовый класс для структурных доменных моделей.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.IsDeleted">
+            <summary>
+            Атрибут удаления записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Created">
+            <summary>
+            Дата создания записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Modified">
+            <summary>
+            Дата изменения записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Deleted">
+            <summary>
+            Дата удаления записи.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.Drill">
+            <summary>
+            Сверло.
             </summary>
         </member>
         <member name="P:DrillShopApi.DAL.Domain.Drill.ArtCode">
             <summary>
-            Артикул
+            Артикул.
             </summary>
         </member>
         <member name="P:DrillShopApi.DAL.Domain.Drill.Description">
             <summary>
-            Описание
+            Описание.
             </summary>
         </member>
         <member name="P:DrillShopApi.DAL.Domain.Drill.Weight">
             <summary>
-            Вес
+            Вес.
             </summary>
         </member>
         <member name="P:DrillShopApi.DAL.Domain.Drill.MinDiametr">
             <summary>
-            Минимальный диаметр
+            Минимальный диаметр.
             </summary>
         </member>
         <member name="P:DrillShopApi.DAL.Domain.Drill.MaxDiametr">
             <summary>
-            Максимальный диаметр
+            Максимальный диаметр.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Drill.Provider">
+            <summary>
+            Поставщик.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.Provider">
+            <summary>
+            Поставщик.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Provider.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Provider.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Provider.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.Shop">
+            <summary>
+            Магазин.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Shop.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Shop.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Shop.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Shop.Telephone">
+            <summary>
+            Телефон.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.ShopAvailability">
+            <summary>
+            Наличие инструмента в магазине.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.ShopAvailability.Count">
+            <summary>
+            Количество доступных единиц.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.ShopAvailability.Shop">
+            <summary>
+            Магазин.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.ShopAvailability.Drill">
+            <summary>
+            Сверло.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.Warehouse">
+            <summary>
+            Склад.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Warehouse.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Warehouse.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Warehouse.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Warehouse.Area">
+            <summary>
+            Площадь помещения.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.Warehouse.Capacity">
+            <summary>
+            Вместимость помещения.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Domain.WHAvailability">
+            <summary>
+            Наличие инструмента на складе.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.WHAvailability.Count">
+            <summary>
+            Количество доступных единиц.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.WHAvailability.Warehouse">
+            <summary>
+            Склад.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.WHAvailability.Drill">
+            <summary>
+            Сверло.
             </summary>
         </member>
         <member name="T:DAL.Mocks.DrillMock">
             <summary>
-            Mock для коллекции сущностей "Сверло"
+            Mock для коллекции сущностей "Сверло".
             </summary>
         </member>
         <member name="M:DAL.Mocks.DrillMock.GetDrill">
             <summary>
-            Получение коллекции сущности "Сверло"
+            Получение коллекции сущности "Сверло".
             </summary>
-            <returns>Коллекция сущностей "Сверло"</returns>
+            <returns>Коллекция сущностей "Сверло".</returns>
         </member>
     </members>
 </doc>

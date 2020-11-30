@@ -6,32 +6,32 @@
     <members>
         <member name="T:DrillShopApi.Models.DTO.DrillDto">
             <summary>
-            DTO для <see cref="T:DrillShopApi.DAL.Domain.Drill"/>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.Drill"/>.
             </summary>
         </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.ArtCode">
             <summary>
-            Артикул
+            Артикул.
             </summary>
         </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.Description">
             <summary>
-            Описание
+            Описание.
             </summary>
         </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.Weight">
             <summary>
-            Вес
+            Вес.
             </summary>
         </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.MinDiametr">
             <summary>
-            Минимальный диаметр
+            Минимальный диаметр.
             </summary>
         </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.MaxDiametr">
             <summary>
-            Максимальный диаметр
+            Максимальный диаметр.
             </summary>
         </member>
     </members>

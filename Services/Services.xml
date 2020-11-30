@@ -21,17 +21,24 @@
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "T:DrillShopApi.Services.Services.DrillService" -->
-        <member name="M:DrillShopApi.Services.Services.DrillService.GetAsync">
-            <inheritdoc cref="T:DrillShopApi.Services.Interfaces.IDrillService"/>
+        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.DAL.Contexts.DrillShopContext,AutoMapper.IMapper)">
+            <summary>
+            Конструктор для сервиса.
+            </summary>
+            <param name="context">Контекст.</param>
+            <param name="mapper">Маппер.</param>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.Get">
+            <inheritdoc cref="T:DrillShopApi.Services.Interfaces.IDrillService"/>.
         </member>
         <member name="T:Services.Mappings.DrillPofile">
             <summary>
-            Профиль маппинга (сверла)
+            Профиль маппинга (сверла).
             </summary>
         </member>
         <member name="M:Services.Mappings.DrillPofile.#ctor">
             <summary>
-            Инициализирует экземпляр <see cref="T:Services.Mappings.DrillPofile"/>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.DrillPofile"/>.
             </summary>
         </member>
     </members>

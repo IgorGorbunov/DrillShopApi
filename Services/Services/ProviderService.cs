@@ -8,23 +8,23 @@ using System.Threading;
 namespace DrillShopApi.Services.Services
 {
     /// <summary>
-    /// Сервис для работы с данными о сверлах.
+    /// Сервис для работы с данными о поставщике.
     /// </summary>
-    public class DrillService : IDrillService
+    class ProviderService : IProviderService
     {
-        private readonly IDrillRepository _repository;
+        private readonly IProviderRepository _repository;
 
         /// <summary>
-        /// Инициализирует экземпляр <see cref="DrillService"/>.
+        /// Инициализирует экземпляр <see cref="ProviderService"/>.
         /// </summary>
         /// <param name="repository">Репозиторий.</param>
-        public DrillService(IDrillRepository repository)
+        public ProviderService(IProviderRepository repository)
         {
             _repository = repository;
         }
 
         ///<inheritdoc cref="ICreatable{TDto}.CreateAsync(TDto)"/>
-        public async Task<DrillDto> CreateAsync(DrillDto dto)
+        public async Task<ProviderDto> CreateAsync(ProviderDto dto)
         {
             return await _repository.CreateAsync(dto);
         }
@@ -36,22 +36,21 @@ namespace DrillShopApi.Services.Services
         }
 
         /// <inheritdoc cref="IGettableById{TDto}.GetAsync(long, CancellationToken)"/>
-        public async Task<DrillDto> GetAsync(long id, CancellationToken token = default)
+        public async Task<ProviderDto> GetAsync(long id, CancellationToken token = default)
         {
             return await _repository.GetAsync(id);
         }
 
         /// <inheritdoc cref="IGettable{TDto}.GetAsync(CancellationToken)"/>
-        public async Task<IEnumerable<DrillDto>> GetAsync(CancellationToken token = default)
+        public async Task<IEnumerable<ProviderDto>> GetAsync(CancellationToken token = default)
         {
             return await _repository.GetAsync();
         }
 
         /// <inheritdoc cref="IUpdatable{TDto}.UpdateAsync(TDto)"/>
-        public async Task<DrillDto> UpdateAsync(DrillDto dto)
+        public async Task<ProviderDto> UpdateAsync(ProviderDto dto)
         {
             return await _repository.UpdateAsync(dto);
         }
-
     }
 }

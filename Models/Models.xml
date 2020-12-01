@@ -4,6 +4,16 @@
         <name>Models</name>
     </assembly>
     <members>
+        <member name="T:DrillShopApi.Models.DTO.BaseDto">
+            <summary>
+            Базовый класс для DTO.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.BaseDto.Id">
+            <summary>
+            Идентификатор записи.
+            </summary>
+        </member>
         <member name="T:DrillShopApi.Models.DTO.DrillDto">
             <summary>
             DTO для <see cref="T:DrillShopApi.DAL.Domain.Drill"/>.
@@ -32,6 +42,371 @@
         <member name="P:DrillShopApi.Models.DTO.DrillDto.MaxDiametr">
             <summary>
             Максимальный диаметр.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.DTO.ProviderDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.Provider"/>.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ProviderDto.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ProviderDto.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ProviderDto.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.DTO.ShopAvailabilityDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.ShopAvailability"/>.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopAvailabilityDto.Count">
+            <summary>
+            Количество доступных единиц.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopAvailabilityDto.Shop">
+            <summary>
+            Магазин.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopAvailabilityDto.Drill">
+            <summary>
+            Сверло.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.DTO.ShopDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.Shop"/>.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopDto.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopDto.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopDto.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.ShopDto.Telephone">
+            <summary>
+            Телефон.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.DTO.WarehouseDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.Warehouse"/>.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WarehouseDto.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WarehouseDto.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WarehouseDto.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WarehouseDto.Area">
+            <summary>
+            Площадь помещения.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WarehouseDto.Capacity">
+            <summary>
+            Вместимость помещения.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.DTO.WHAvailabilityDto">
+            <summary>
+            DTO для <see cref="T:DrillShopApi.DAL.Domain.WHAvailability"/>.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WHAvailabilityDto.Count">
+            <summary>
+            Количество доступных единиц.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WHAvailabilityDto.Warehouse">
+            <summary>
+            Склад.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.WHAvailabilityDto.Drill">
+            <summary>
+            Сверло.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Drill.CreateDrillRequest">
+            <summary>
+            Запрос на создание позиции сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.ArtCode">
+            <summary>
+            Артикул.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.Description">
+            <summary>
+            Описание.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.Weight">
+            <summary>
+            Вес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.MinDiametr">
+            <summary>
+            Минимальный диаметр.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.MaxDiametr">
+            <summary>
+            Максимальный диаметр.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Drill.UpdateDrillRequest">
+            <summary>
+            Запрос на изменение позиции сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.UpdateDrillRequest.Id">
+            <summary>
+            Идентификатор сущности.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Provider.CreateProviderRequest">
+            <summary>
+            Запрос на создание позиции поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Provider.CreateProviderRequest.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Provider.CreateProviderRequest.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Provider.CreateProviderRequest.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Provider.UpdateProviderRequest">
+            <summary>
+            Запрос на изменение позиции поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Provider.UpdateProviderRequest.Id">
+            <summary>
+            Идентификатор сущности.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Shop.CreateShopRequest">
+            <summary>
+            Запрос на создание позиции магазина.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Shop.CreateShopRequest.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Shop.CreateShopRequest.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Shop.CreateShopRequest.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Shop.CreateShopRequest.Telephone">
+            <summary>
+            Телефон.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Shop.UpdateShopRequest">
+            <summary>
+            Запрос на изменение позиции магазина.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Shop.UpdateShopRequest.Id">
+            <summary>
+            Идентификатор сущности.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest">
+            <summary>
+            Запрос на создание позиции склада.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest.Area">
+            <summary>
+            Площадь помещения.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest.Capacity">
+            <summary>
+            Вместимость помещения.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Requests.Warehouse.UpdateWarehouseRequest">
+            <summary>
+            Запрос на изменение позиции склада.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Requests.Warehouse.UpdateWarehouseRequest.Id">
+            <summary>
+            Идентификатор сущности.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Responses.DrillResponse">
+            <summary>
+            Ответ на запросы для позиций сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.ArtCode">
+            <summary>
+            Артикул.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.Description">
+            <summary>
+            Описание.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.Weight">
+            <summary>
+            Вес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.MinDiametr">
+            <summary>
+            Минимальный диаметр.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.MaxDiametr">
+            <summary>
+            Максимальный диаметр.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Responses.ProviderResponse">
+            <summary>
+            Ответ на запросы для позиций поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ProviderResponse.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ProviderResponse.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ProviderResponse.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Responses.ShopResponse">
+            <summary>
+            Ответ на запросы для позиций магазина.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ShopResponse.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ShopResponse.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ShopResponse.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.ShopResponse.Telephone">
+            <summary>
+            Телефон.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Models.Responses.WarehouseResponse">
+            <summary>
+            Ответ на запросы для позиций сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.WarehouseResponse.Name">
+            <summary>
+            Наименование.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.WarehouseResponse.City">
+            <summary>
+            Город.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.WarehouseResponse.Address">
+            <summary>
+            Адрес.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.WarehouseResponse.Area">
+            <summary>
+            Площадь помещения.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.WarehouseResponse.Capacity">
+            <summary>
+            Вместимость помещения.
             </summary>
         </member>
     </members>

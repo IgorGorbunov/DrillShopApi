@@ -7,15 +7,15 @@ using DrillShopApi.Common.Swagger;
 using DrillShopApi.Services.Bootstrap;
 using DrillShopApi.Services.Services;
 using DrillShopApi.DAL.Bootstrap;
+using DrillShopApi.Controllers;
+using DrillShopApi.Repositories;
+using DrillShopApi.Repositories.Bootstrap;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 
 namespace DrillShopApi
@@ -33,9 +33,19 @@ namespace DrillShopApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.ConfigureDb(Configuration);
+            services.ConfigureRepositories();
             services.AddControllers();
             services.ConfigureServices();
-            services.AddAutoMapper(typeof(DrillService).GetTypeInfo().Assembly);
+            services.AddAutoMapper(
+                typeof(DrillRepository).GetTypeInfo().Assembly,
+                typeof(DrillsController).GetTypeInfo().Assembly,
+                typeof(ShopRepository).GetTypeInfo().Assembly,
+                typeof(ShopsController).GetTypeInfo().Assembly,
+                typeof(ProviderRepository).GetTypeInfo().Assembly,
+                typeof(ProvidersController).GetTypeInfo().Assembly,
+                typeof(WarehouseRepository).GetTypeInfo().Assembly,
+                typeof(WarehousesController).GetTypeInfo().Assembly
+                );
             services.ConfigureSwagger();
         }
 

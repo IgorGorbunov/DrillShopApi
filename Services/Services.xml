@@ -15,31 +15,200 @@
             </summary>
             <param name="services">Коллекция сервисов из Startup.</param>
         </member>
+        <member name="T:DrillShopApi.Services.Interfaces.ICreatable`1">
+            <summary>
+            Интерфейс сервиса для создания сущности.
+            </summary>
+            <typeparam name="TDto">DTO.</typeparam>
+        </member>
+        <member name="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)">
+            <summary>
+            Создание сущности.
+            </summary>
+            <param name="dto">DTO.</param>
+            <returns>Идентификатор созданной сущности.</returns>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.ICrudService`1">
+            <summary>
+            Интерфейс сервиса с базовыми CRUD-операциями.
+            </summary>
+            <typeparam name="TDto">DTO.</typeparam>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IDeletable">
+            <summary>
+            Интерфейс сервиса для удаления сущностей.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Interfaces.IDeletable.DeleteAsync(System.Int64[])">
+            <summary>
+            Групповое удаление сущностей.
+            </summary>
+            <param name="ids">Идентификаторы.</param>
+            <returns>Задача, представляющая асинхронную операцию.</returns>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IGettable`1">
+            <summary>
+            Интерфейс сервиса для получения сущностей.
+            </summary>
+            <typeparam name="TDto">DTO.</typeparam>
+        </member>
+        <member name="M:DrillShopApi.Services.Interfaces.IGettable`1.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Получение сущностей.
+            </summary>
+            <param name="token">Экземпляр <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>Сущности.</returns>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IGettableById`1">
+            <summary>
+            Интерфейс сервиса для получения сущности по идентификатору.
+            </summary>
+            <typeparam name="TDto">DTO.</typeparam>
+        </member>
+        <member name="M:DrillShopApi.Services.Interfaces.IGettableById`1.GetAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Получение сущности по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="token">Экземпляр <see cref="T:System.Threading.CancellationToken"/>.</param>
+            <returns>Экземпляр сущности.</returns>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IUpdatable`1">
+            <summary>
+            Интерфейс сервиса для изменения сущности.
+            </summary>
+            <typeparam name="TDto">DTO.</typeparam>
+        </member>
+        <member name="M:DrillShopApi.Services.Interfaces.IUpdatable`1.UpdateAsync(`0)">
+            <summary>
+            Изменение сущности.
+            </summary>
+            <param name="dto">DTO.</param>
+            <returns>Обновленная сущность.</returns>
+        </member>
         <member name="T:DrillShopApi.Services.Interfaces.IDrillService">
             <summary>
             Интерфейс сервиса для работы с данными о сверлах.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:DrillShopApi.Services.Services.DrillService" -->
-        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.DAL.Contexts.DrillShopContext,AutoMapper.IMapper)">
+        <member name="T:DrillShopApi.Services.Interfaces.IProviderService">
             <summary>
-            Конструктор для сервиса.
-            </summary>
-            <param name="context">Контекст.</param>
-            <param name="mapper">Маппер.</param>
-        </member>
-        <member name="M:DrillShopApi.Services.Services.DrillService.Get">
-            <inheritdoc cref="T:DrillShopApi.Services.Interfaces.IDrillService"/>.
-        </member>
-        <member name="T:Services.Mappings.DrillPofile">
-            <summary>
-            Профиль маппинга (сверла).
+            Интерфейс сервиса для работы с данными о поставщиках.
             </summary>
         </member>
-        <member name="M:Services.Mappings.DrillPofile.#ctor">
+        <member name="T:DrillShopApi.Services.Interfaces.IShopService">
             <summary>
-            Инициализирует экземпляр <see cref="T:Services.Mappings.DrillPofile"/>.
+            Интерфейс сервиса для работы с данными о магазинах.
             </summary>
+        </member>
+        <member name="T:DrillShopApi.Services.Interfaces.IWarehouseService">
+            <summary>
+            Интерфейс сервиса для работы с данными о складах.
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Services.Services.DrillService">
+            <summary>
+            Сервис для работы с данными о сверлах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.Repositories.Interfaces.IDrillRepository)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.DrillService"/>.
+            </summary>
+            <param name="repository">Репозиторий.</param>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.CreateAsync(DrillShopApi.Models.DTO.DrillDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.DeleteAsync(System.Int64[])">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IDeletable.DeleteAsync(System.Int64[])"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.GetAsync(System.Int64,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettableById`1.GetAsync(System.Int64,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.GetAsync(System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettable`1.GetAsync(System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.DrillService.UpdateAsync(DrillShopApi.Models.DTO.DrillDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IUpdatable`1.UpdateAsync(`0)"/>
+        </member>
+        <member name="T:DrillShopApi.Services.Services.ProviderService">
+            <summary>
+            Сервис для работы с данными о поставщике.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.#ctor(DrillShopApi.Repositories.Interfaces.IProviderRepository)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.ProviderService"/>.
+            </summary>
+            <param name="repository">Репозиторий.</param>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.CreateAsync(DrillShopApi.Models.DTO.ProviderDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.DeleteAsync(System.Int64[])">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IDeletable.DeleteAsync(System.Int64[])"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.GetAsync(System.Int64,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettableById`1.GetAsync(System.Int64,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.GetAsync(System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettable`1.GetAsync(System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ProviderService.UpdateAsync(DrillShopApi.Models.DTO.ProviderDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IUpdatable`1.UpdateAsync(`0)"/>
+        </member>
+        <member name="T:DrillShopApi.Services.Services.ShopService">
+            <summary>
+            Сервис для работы с данными об магазине.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.#ctor(DrillShopApi.Repositories.Interfaces.IShopRepository)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.ShopService"/>.
+            </summary>
+            <param name="repository">Репозиторий.</param>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.CreateAsync(DrillShopApi.Models.DTO.ShopDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.DeleteAsync(System.Int64[])">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IDeletable.DeleteAsync(System.Int64[])"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.GetAsync(System.Int64,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettableById`1.GetAsync(System.Int64,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.GetAsync(System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettable`1.GetAsync(System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.ShopService.UpdateAsync(DrillShopApi.Models.DTO.ShopDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IUpdatable`1.UpdateAsync(`0)"/>
+        </member>
+        <member name="T:DrillShopApi.Services.Services.WarehouseService">
+            <summary>
+            Сервис для работы с данными о складах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.#ctor(DrillShopApi.Repositories.Interfaces.IWarehouseRepository)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.WarehouseService"/>.
+            </summary>
+            <param name="repository">Репозиторий.</param>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.CreateAsync(DrillShopApi.Models.DTO.WarehouseDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.DeleteAsync(System.Int64[])">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IDeletable.DeleteAsync(System.Int64[])"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.GetAsync(System.Int64,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettableById`1.GetAsync(System.Int64,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.GetAsync(System.Threading.CancellationToken)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IGettable`1.GetAsync(System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:DrillShopApi.Services.Services.WarehouseService.UpdateAsync(DrillShopApi.Models.DTO.WarehouseDto)">
+            <inheritdoc cref="M:DrillShopApi.Services.Interfaces.IUpdatable`1.UpdateAsync(`0)"/>
         </member>
     </members>
 </doc>

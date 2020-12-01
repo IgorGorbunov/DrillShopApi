@@ -22,7 +22,22 @@
         </member>
         <member name="F:DrillShopApi.Common.Swagger.SwaggerDocParts.Drills">
             <summary>
-            Константа для swagger-документа "Сверла".
+            Константа для swagger-документа "Сверло".
+            </summary>
+        </member>
+        <member name="F:DrillShopApi.Common.Swagger.SwaggerDocParts.Shops">
+            <summary>
+            Константа для swagger-документа "Магазин".
+            </summary>
+        </member>
+        <member name="F:DrillShopApi.Common.Swagger.SwaggerDocParts.Providers">
+            <summary>
+            Константа для swagger-документа "Магазин".
+            </summary>
+        </member>
+        <member name="F:DrillShopApi.Common.Swagger.SwaggerDocParts.Warehouses">
+            <summary>
+            Константа для swagger-документа "Магазин".
             </summary>
         </member>
         <member name="T:DrillShopApi.Controllers.DrillsController">
@@ -30,18 +45,208 @@
             Контроллер для работы с данными о сверлах.
             </summary>
         </member>
-        <member name="M:DrillShopApi.Controllers.DrillsController.#ctor(DrillShopApi.Services.Interfaces.IDrillService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.DrillsController})">
+        <member name="M:DrillShopApi.Controllers.DrillsController.#ctor(DrillShopApi.Services.Interfaces.IDrillService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.DrillsController},AutoMapper.IMapper)">
             <summary>
             Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.DrillsController"/>.
             </summary>
             <param name="drillService">Сервис сверл.</param>
             <param name="logger">Логгер.</param>
+            <param name="mapper">Маппер.</param>
         </member>
-        <member name="M:DrillShopApi.Controllers.DrillsController.Get">
+        <member name="M:DrillShopApi.Controllers.DrillsController.GetAsync(System.Threading.CancellationToken)">
             <summary>
             Получение перечня доступных в магазине сверл.
             </summary>
             <returns>Коллекция сущностей "Сверло".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.GetByIdAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Получение сверла по Id.
+            </summary>
+            <returns>Cущность "Сверло".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.PostAsync(DrillShopApi.Models.Requests.Drill.CreateDrillRequest,System.Threading.CancellationToken)">
+            <summary>
+            Добавление сущности "Сверло".
+            </summary>
+            <returns>Cущность "Сверло".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.PutAsync(DrillShopApi.Models.Requests.Drill.UpdateDrillRequest,System.Threading.CancellationToken)">
+            <summary>
+            Изменение сущности "Сверло".
+            </summary>
+            <returns>Cущность "Сверло".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.DrillsController.DeleteAsync(System.Threading.CancellationToken,System.Int64[])">
+            <summary>
+            Удаление сущностей "Сверло".
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Controllers.ProvidersController">
+            <summary>
+            Контроллер для работы с данными о поставщике.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.#ctor(DrillShopApi.Services.Interfaces.IProviderService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.ProvidersController},AutoMapper.IMapper)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.ProvidersController"/>
+            </summary>
+            <param name="providerService">Сервис поставщиков.</param>
+            <param name="logger">Логгер.</param>
+            <param name="mapper">Маппер.</param>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Получение перечня поставщиков.
+            </summary>
+            <returns>Коллекция сущностей "Поставщик".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.GetByIdAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Получение поставщиков по Id.
+            </summary>
+            <returns>Cущность "Поставщик".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.PostAsync(DrillShopApi.Models.Requests.Provider.CreateProviderRequest,System.Threading.CancellationToken)">
+            <summary>
+            Добавление сущности "Поставщик".
+            </summary>
+            <returns>Cущность "Поставщик".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.PutAsync(DrillShopApi.Models.Requests.Provider.UpdateProviderRequest,System.Threading.CancellationToken)">
+            <summary>
+            Изменение сущности "Поставщик".
+            </summary>
+            <returns>Cущность "Поставщик".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ProvidersController.DeleteAsync(System.Threading.CancellationToken,System.Int64[])">
+            <summary>
+            Удаление сущностей "Поставщик".
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Controllers.ShopsController">
+            <summary>
+            Контроллер для работы с данными о магазинах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.#ctor(DrillShopApi.Services.Interfaces.IShopService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.ShopsController},AutoMapper.IMapper)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.ShopsController"/>
+            </summary>
+            <param name="shopService">Сервис магазинов.</param>
+            <param name="logger">Логгер.</param>
+            <param name="mapper">Маппер.</param>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Получение перечня доступных магазинов.
+            </summary>
+            <returns>Коллекция сущностей "Магазин".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.GetByIdAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Получение магазина по Id.
+            </summary>
+            <returns>Cущность "Магазин".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.PostAsync(DrillShopApi.Models.Requests.Shop.CreateShopRequest,System.Threading.CancellationToken)">
+            <summary>
+            Добавление сущности "Магазин".
+            </summary>
+            <returns>Cущность "Магазин".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.PutAsync(DrillShopApi.Models.Requests.Shop.UpdateShopRequest,System.Threading.CancellationToken)">
+            <summary>
+            Изменение сущности "Магазин".
+            </summary>
+            <returns>Cущность "Магазин".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.ShopsController.DeleteAsync(System.Threading.CancellationToken,System.Int64[])">
+            <summary>
+            Удаление сущностей "Магазин".
+            </summary>
+        </member>
+        <member name="T:DrillShopApi.Controllers.WarehousesController">
+            <summary>
+            Контроллер для работы с данными о складах.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.#ctor(DrillShopApi.Services.Interfaces.IWarehouseService,Microsoft.Extensions.Logging.ILogger{DrillShopApi.Controllers.WarehousesController},AutoMapper.IMapper)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:DrillShopApi.Controllers.WarehousesController"/>
+            </summary>
+            <param name="warehouseService">Сервис складов.</param>
+            <param name="logger">Логгер.</param>
+            <param name="mapper">Маппер.</param>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Получение перечня доступных складов.
+            </summary>
+            <returns>Коллекция сущностей "Склад".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.GetByIdAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Получение складов по Id.
+            </summary>
+            <returns>Cущность "Склад".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.PostAsync(DrillShopApi.Models.Requests.Warehouse.CreateWarehouseRequest,System.Threading.CancellationToken)">
+            <summary>
+            Добавление сущности "Склад".
+            </summary>
+            <returns>Cущность "Склад".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.PutAsync(DrillShopApi.Models.Requests.Warehouse.UpdateWarehouseRequest,System.Threading.CancellationToken)">
+            <summary>
+            Изменение сущности "Склад".
+            </summary>
+            <returns>Cущность "Склад".</returns>
+        </member>
+        <member name="M:DrillShopApi.Controllers.WarehousesController.DeleteAsync(System.Threading.CancellationToken,System.Int64[])">
+            <summary>
+            Удаление сущностей "Склад".
+            </summary>
+        </member>
+        <member name="T:Services.Mappings.DrillPofile">
+            <summary>
+            Маппинг для запросов и ответов контроллера сущности сверла.
+            </summary>
+        </member>
+        <member name="M:Services.Mappings.DrillPofile.#ctor">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.DrillPofile"/>.
+            </summary>
+        </member>
+        <member name="T:Services.Mappings.ProviderProfile">
+            <summary>
+            Маппинг для запросов и ответов контроллера сущности Поставщик.
+            </summary>
+        </member>
+        <member name="M:Services.Mappings.ProviderProfile.#ctor">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.ProviderProfile"/>.
+            </summary>
+        </member>
+        <member name="T:Services.Mappings.ShopProfile">
+            <summary>
+            Маппинг для запросов и ответов контроллера сущности магазин.
+            </summary>
+        </member>
+        <member name="M:Services.Mappings.ShopProfile.#ctor">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.ShopProfile"/>.
+            </summary>
+        </member>
+        <member name="T:Services.Mappings.WarehouseProfile">
+            <summary>
+            Маппинг для запросов и ответов контроллера сущности склад.
+            </summary>
+        </member>
+        <member name="M:Services.Mappings.WarehouseProfile.#ctor">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Services.Mappings.WarehouseProfile"/>.
+            </summary>
         </member>
     </members>
 </doc>

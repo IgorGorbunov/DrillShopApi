@@ -14,7 +14,7 @@ namespace Services.Mappings
         /// </summary>
         public DrillPofile()
         {
-            CreateMap<Drill, DrillDto>();
+            CreateMap<Drill, DrillDto>().ReverseMap();
         }
     }
 }

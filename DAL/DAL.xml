@@ -57,6 +57,31 @@
             </summary>
             <param name="options">Опции для конфигурации контекста.</param>
         </member>
+        <member name="T:DrillShopApi.DAL.Domain.BaseDimEntity">
+            <summary>
+            Базовый класс для сущностных доменных моделей.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseDimEntity.IsDeleted">
+            <summary>
+            Атрибут удаления записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseDimEntity.CreatedDateTimeOffset">
+            <summary>
+            Дата создания записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseDimEntity.ModifiedDateTimeOffset">
+            <summary>
+            Дата изменения записи.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.DAL.Domain.BaseDimEntity.DeletedDateTimeOffset">
+            <summary>
+            Дата удаления записи.
+            </summary>
+        </member>
         <member name="T:DrillShopApi.DAL.Domain.BaseEntity">
             <summary>
             Базовый класс для доменных моделей.
@@ -65,31 +90,6 @@
         <member name="P:DrillShopApi.DAL.Domain.BaseEntity.Id">
             <summary>
             Идентификатор записи.
-            </summary>
-        </member>
-        <member name="T:DrillShopApi.DAL.Domain.BaseStructEntity">
-            <summary>
-            Базовый класс для структурных доменных моделей.
-            </summary>
-        </member>
-        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.IsDeleted">
-            <summary>
-            Атрибут удаления записи.
-            </summary>
-        </member>
-        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Created">
-            <summary>
-            Дата создания записи.
-            </summary>
-        </member>
-        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Modified">
-            <summary>
-            Дата изменения записи.
-            </summary>
-        </member>
-        <member name="P:DrillShopApi.DAL.Domain.BaseStructEntity.Deleted">
-            <summary>
-            Дата удаления записи.
             </summary>
         </member>
         <member name="T:DrillShopApi.DAL.Domain.Drill">

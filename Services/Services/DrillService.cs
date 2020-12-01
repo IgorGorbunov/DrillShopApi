@@ -1,111 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using DrillShopApi.Models.DTO;
-using DAL.Mocks;
-using DrillShopApi.DAL.Contexts;
-using DrillShopApi.DAL.Domain;
 using DrillShopApi.Services.Interfaces;
-using AutoMapper;
+using DrillShopApi.Repositories.Interfaces;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace DrillShopApi.Services.Services
 {
-    // <summary>
+    /// <summary>
     /// Сервис для работы с данными о сверлах.
     /// </summary>
     public class DrillService : IDrillService
     {
-
-        private readonly IMapper _mapper;
-        private readonly DrillShopContext _context;
+        private readonly IDrillRepository _repository;
 
         /// <summary>
-        /// Конструктор для сервиса.
+        /// Инициализирует экземпляр <see cref="DrillService"/>.
         /// </summary>
-        /// <param name="context">Контекст.</param>
-        /// <param name="mapper">Маппер.</param>
-        public DrillService(DrillShopContext context, IMapper mapper)
+        /// <param name="repository">Репозиторий.</param>
+        public DrillService(IDrillRepository repository)
         {
-            _context = context;
-            _mapper = mapper;
+            _repository = repository;
         }
 
-        /// <inheritdoc cref="IDrillService"/>.
-        public IEnumerable<DrillDto> Get()
+        ///<inheritdoc cref="ICreatable{TDto}.CreateAsync(TDto)"/>
+        public async Task<DrillDto> CreateAsync(DrillDto dto)
         {
-            //var dresses = DrillMock.GetDrill();
-            //var response = _mapper.Map<IEnumerable<DrillDto>>(dresses);
-            //return response;
+            return await _repository.CreateAsync(dto);
+        }
 
-            var provider = new Provider
-            {
-                Id = 1,
-                Name = "BOSCH",
-                Address = "ул. Ленина, д. 3",
-                City = "Ульяновск",
-                Created = DateTime.Now,
-                IsDeleted = false
-            };
+        /// <inheritdoc cref="IDeletable.DeleteAsync(long[])"/>
+        public async Task DeleteAsync(params long[] ids)
+        {
+            await _repository.DeleteAsync(ids);
+        }
 
-            //var drills = DrillMock.GetDrill();
+        /// <inheritdoc cref="IGettableById{TDto}.GetAsync(long, CancellationToken)"/>
+        public async Task<DrillDto> GetAsync(long id, CancellationToken token = default)
+        {
+            return await _repository.GetAsync(id);
+        }
 
-            var drill = new Drill
-            {
-                Id = 1,
-                ArtCode = "123",
-                Description = "Сверло спиральное",
-                MaxDiametr = 20.0,
-                MinDiametr = 1.2,
-                Provider = provider,
-                Created = DateTime.Now,
-                IsDeleted = false,
-                Weight = 0.01
-            };
+        /// <inheritdoc cref="IGettable{TDto}.GetAsync(CancellationToken)"/>
+        public async Task<IEnumerable<DrillDto>> GetAsync(CancellationToken token = default)
+        {
+            return await _repository.GetAsync();
+        }
 
-            var shop = new Shop
-            {
-                Name = "Мир инструмента",
-                Address = "ул. Ленина, д. 31",
-                City = "Ульяновск",
-                Created = DateTime.Now,
-                IsDeleted = false,
-                Telephone = "8 800 00 00 00"
-            };
-
-            var warehouse = new Warehouse
-            {
-                Name = "Cклад №1",
-                Address = "ул. Ленина, д. 32",
-                City = "Ульяновск",
-                Created = DateTime.Now,
-                IsDeleted = false,
-                Area = 100,
-                Capacity = 40000
-            };
-
-            var shopAvail = new ShopAvailability
-            {
-                Shop = shop,
-                Drill = drill,
-                Count = 10
-            };
-
-            var whAvail = new WHAvailability
-            {
-                Warehouse = warehouse,
-                Drill = drill,
-                Count = 15
-            };
-
-            _context.Providers.Add(provider);
-            _context.Drills.Add(drill);
-            _context.Shops.Add(shop);
-            _context.Warehouses.Add(warehouse);
-            _context.ShopAvailabilities.Add(shopAvail);
-            _context.WHAvailabilities.Add(whAvail);
-
-            _context.SaveChanges();
-            return _mapper.Map<IEnumerable<DrillDto>>(_context.Drills);
+        /// <inheritdoc cref="IUpdatable{TDto}.UpdateAsync(TDto)"/>
+        public async Task<DrillDto> UpdateAsync(DrillDto dto)
+        {
+            return await _repository.UpdateAsync(dto);
         }
 
     }

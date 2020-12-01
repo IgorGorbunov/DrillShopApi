@@ -7,7 +7,7 @@ namespace DrillShopApi.DAL.Domain
     /// <summary>
     /// Склад.
     /// </summary>
-    public class Warehouse : BaseStructEntity
+    public class Warehouse : BaseDimEntity
     {
         /// <summary>
         /// Наименование.

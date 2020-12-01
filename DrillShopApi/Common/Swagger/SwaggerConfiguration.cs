@@ -19,6 +19,27 @@ namespace DrillShopApi.Common.Swagger
                 c.DocumentName = SwaggerDocParts.Drills;
                 c.ApiGroupNames = new[] { SwaggerDocParts.Drills };
                 c.GenerateXmlObjects = true;
+            })
+            .AddSwaggerDocument(c =>
+            {
+                c.Title = "Providers";
+                c.DocumentName = SwaggerDocParts.Providers;
+                c.ApiGroupNames = new[] { SwaggerDocParts.Providers };
+                c.GenerateXmlObjects = true;
+            })
+            .AddSwaggerDocument(c =>
+            {
+                c.Title = "Shops";
+                c.DocumentName = SwaggerDocParts.Shops;
+                c.ApiGroupNames = new[] { SwaggerDocParts.Shops };
+                c.GenerateXmlObjects = true;
+            })
+            .AddSwaggerDocument(c =>
+            {
+                c.Title = "Warehouses";
+                c.DocumentName = SwaggerDocParts.Warehouses;
+                c.ApiGroupNames = new[] { SwaggerDocParts.Warehouses };
+                c.GenerateXmlObjects = true;
             });
         }
     }

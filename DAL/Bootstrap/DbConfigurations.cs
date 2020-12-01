@@ -19,15 +19,9 @@ namespace DrillShopApi.DAL.Bootstrap
         public static void ConfigureDb(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<DrillShopContext>(
-                options =>
-                {
-                    options.UseNpgsql(
-                                        configuration.GetConnectionString(nameof(DrillShopContext)),
-                                        builder =>
-                                        {
-                                            builder.MigrationsAssembly(typeof(DrillShopContext).Assembly.FullName);
-                                        });
-                });
+                options => options.UseNpgsql(
+                    configuration.GetConnectionString(nameof(DrillShopContext)),
+                    builder => builder.MigrationsAssembly(typeof(DrillShopContext).Assembly.FullName)));
         }
     }
 }

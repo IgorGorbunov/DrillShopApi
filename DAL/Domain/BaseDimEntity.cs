@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DrillShopApi.DAL.Domain
 {
     /// <summary>
-    /// Базовый класс для структурных доменных моделей.
+    /// Базовый класс для сущностных доменных моделей.
     /// </summary>
-    public abstract class BaseStructEntity : BaseEntity
+    public abstract class BaseDimEntity : BaseEntity
     {
         /// <summary>
         /// Атрибут удаления записи.
@@ -19,16 +19,16 @@ namespace DrillShopApi.DAL.Domain
         /// Дата создания записи.
         /// </summary>
         [Required]
-        public DateTime Created { get; set; }
+        public DateTimeOffset CreatedDateTimeOffset { get; set; }
 
         /// <summary>
         /// Дата изменения записи.
         /// </summary>
-        public DateTime Modified { get; set; }
+        public DateTimeOffset ModifiedDateTimeOffset { get; set; }
 
         /// <summary>
         /// Дата удаления записи.
         /// </summary>
-        public DateTime Deleted { get; set; }
+        public DateTimeOffset DeletedDateTimeOffset { get; set; }
     }
 }

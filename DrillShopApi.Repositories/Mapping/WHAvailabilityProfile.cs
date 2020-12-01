@@ -14,7 +14,7 @@ namespace Services.Mappings
         /// </summary>
         public WHAvailabilityProfile()
         {
-            CreateMap<WHAvailability, WHAvailabilityDto>();
+            CreateMap<WHAvailability, WHAvailabilityDto>().ReverseMap();
         }
     }
 }

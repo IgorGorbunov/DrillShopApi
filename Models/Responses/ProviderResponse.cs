@@ -3,7 +3,7 @@
     /// <summary>
     /// Ответ на запросы для позиций поставщика.
     /// </summary>
-    class ProviderResponse
+    public class ProviderResponse
     {
         /// <summary>
         /// Наименование.

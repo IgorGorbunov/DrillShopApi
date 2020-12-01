@@ -18,7 +18,10 @@ namespace DrillShopApi.Services.Bootstrap
         /// <param name="services">Коллекция сервисов из Startup.</param>
         public static void ConfigureServices(this IServiceCollection services)
         {
+            services.AddTransient<IProviderService, ProviderService>();
             services.AddTransient<IDrillService, DrillService>();
+            services.AddTransient<IShopService, ShopService>();
+            services.AddTransient<IWarehouseService, WarehouseService>();
         }
     }
 }

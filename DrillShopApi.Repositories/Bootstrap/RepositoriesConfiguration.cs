@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using DrillShopApi.Repositories.Interfaces;
 
 namespace DrillShopApi.Repositories.Bootstrap
 {
@@ -9,7 +10,10 @@ namespace DrillShopApi.Repositories.Bootstrap
     {
         public static void ConfigureRepositories (this IServiceCollection services)
         {
-            //services.AddScoped<IDrillRepository, DrillRepository>();
+            services.AddTransient<IDrillRepository, DrillRepository>();
+            services.AddTransient<IShopRepository, ShopRepository>();
+            services.AddTransient<IProviderRepository, ProviderRepository>();
+            services.AddTransient<IWarehouseRepository, WarehouseRepository>();
         }
     }
 }

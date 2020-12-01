@@ -9,7 +9,7 @@ namespace DrillShopApi.Repositories
     /// <summary>
     /// Репозиторий для работы с сущностями "Поставщик".
     /// </summary>
-    class ProviderRepository : BaseRepository<ProviderDto, Provider>, IProviderRepository
+    public class ProviderRepository : BaseRepository<ProviderDto, Provider>, IProviderRepository
     {
         /// <summary>
         /// Инициализирует экземпляр <see cref="ProviderRepository"/>.

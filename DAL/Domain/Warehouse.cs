@@ -1,6 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DrillShopApi.DAL.Domain
 {
@@ -40,5 +39,10 @@ namespace DrillShopApi.DAL.Domain
         /// Вместимость помещения.
         /// </summary>
         public double Capacity { get; set; }
+
+        /// <summary>
+        /// Наличие данного сверла на складах.
+        /// </summary>
+        public ICollection<WHAvailability> WHAvailabilities { get; set; }
     }
 }

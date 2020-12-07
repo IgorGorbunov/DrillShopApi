@@ -1,6 +1,5 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace DrillShopApi.DAL.Domain
 {
@@ -36,5 +35,10 @@ namespace DrillShopApi.DAL.Domain
         [StringLength(50)]
         [Required]
         public string Telephone { get; set; }
+
+        /// <summary>
+        /// Наличие данного сверла в магазинах.
+        /// </summary>
+        public ICollection<ShopAvailability> ShopAvailabilities { get; set; }
     }
 }

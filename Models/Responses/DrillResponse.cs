@@ -29,5 +29,11 @@
         /// Максимальный диаметр.
         /// </summary>
         public double MaxDiametr { get; set; }
+
+        /// <summary>
+        /// Тип сверла.
+        /// </summary>
+        public string DrillType { get; set; }
+
     }
 }

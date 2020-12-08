@@ -44,6 +44,21 @@
             Максимальный диаметр.
             </summary>
         </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.Provider">
+            <summary>
+            Поставщик.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.ProviderId">
+            <summary>
+            Идентификатор поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.DTO.DrillDto.DrillType">
+            <summary>
+            Тип сверла.
+            </summary>
+        </member>
         <member name="T:DrillShopApi.Models.DTO.ProviderDto">
             <summary>
             DTO для <see cref="T:DrillShopApi.DAL.Domain.Provider"/>.
@@ -189,6 +204,11 @@
             Максимальный диаметр.
             </summary>
         </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.DrillType">
+            <summary>
+            Тип сверла.
+            </summary>
+        </member>
         <member name="T:DrillShopApi.Models.Requests.Drill.UpdateDrillRequest">
             <summary>
             Запрос на изменение позиции сверла.
@@ -332,6 +352,11 @@
         <member name="P:DrillShopApi.Models.Responses.DrillResponse.MaxDiametr">
             <summary>
             Максимальный диаметр.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.DrillType">
+            <summary>
+            Тип сверла.
             </summary>
         </member>
         <member name="T:DrillShopApi.Models.Responses.ProviderResponse">

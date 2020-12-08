@@ -36,5 +36,10 @@ namespace DrillShopApi.Models.Requests.Drill
         /// </summary>
         [Required]
         public double MaxDiametr { get; set; }
+
+        /// <summary>
+        /// Тип сверла.
+        /// </summary>
+        public string DrillType { get; set; }
     }
 }

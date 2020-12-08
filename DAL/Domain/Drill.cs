@@ -50,6 +50,11 @@ namespace DrillShopApi.DAL.Domain
         public long ProviderId { get; set; }
 
         /// <summary>
+        /// Тип сверла.
+        /// </summary>
+        public string DrillType { get; set; }
+
+        /// <summary>
         /// Наличие данного сверла в магазинах.
         /// </summary>
         public ICollection<ShopAvailability> ShopAvailabilities { get; set; }

@@ -37,5 +37,21 @@ namespace DrillShopApi.Models.DTO
         /// </summary>
         [Required]
         public double MaxDiametr { get; set; }
+
+        /// <summary>
+        /// Поставщик.
+        /// </summary>
+        public Provider Provider { get; set; }
+
+        /// <summary>
+        /// Идентификатор поставщика.
+        /// </summary>
+        public long ProviderId { get; set; }
+
+        /// <summary>
+        /// Тип сверла.
+        /// </summary>
+        public string DrillType { get; set; }
+
     }
 }

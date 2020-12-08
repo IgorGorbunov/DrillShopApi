@@ -7,8 +7,20 @@ using System.Linq.Expressions;
 
 namespace DrillShopApi.DAL.Fluent
 {
+    /// <summary>
+    /// Класс расширения для FluentApi Configs.
+    /// </summary>
     public static class FluentExtentions
     {
+        /// <summary>
+        /// Конфигурация для слабой сущности.
+        /// </summary>
+        /// <typeparam name="T">Слабая сущность.</typeparam>
+        /// <typeparam name="T1">Сущность-ссылка 1.</typeparam>
+        /// <typeparam name="T2">Сущность-ссылка 2.</typeparam>
+        /// <param name="builder">Билдер сущности.</param>
+        /// <param name="withMany1">Дерево для связи 1.</param>
+        /// <param name="withMany2">Дерево для связи 2.</param>
         public static void BaseEntityWithLinksConfig<T, T1, T2>(this EntityTypeBuilder<T> builder,
                                                            Expression<Func<T1, IEnumerable<T>>> withMany1 = default,
                                                            Expression<Func<T2, IEnumerable<T>>> withMany2 = default)

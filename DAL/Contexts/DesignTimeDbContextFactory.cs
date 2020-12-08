@@ -6,8 +6,16 @@ using System.IO;
 
 namespace DrillShopApi.DAL.Contexts
 {
+    /// <summary>
+    /// Фабрика для создания нового контекста в процессе миграций.
+    /// </summary>
     internal sealed class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<DrillShopContext>
     {
+        /// <summary>
+        /// Создание контекста для миграций.
+        /// </summary>
+        /// <param name="args">Строковые аршументы миграций.</param>
+        /// <returns>Контекст.</returns>
         public DrillShopContext CreateDbContext(string[] args)
         {
             var configuration = new ConfigurationBuilder()

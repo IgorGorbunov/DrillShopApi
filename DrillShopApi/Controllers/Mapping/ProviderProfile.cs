@@ -17,7 +17,7 @@ namespace Services.Mappings
         {
             CreateMap<CreateProviderRequest, ProviderDto>();
             CreateMap<UpdateProviderRequest, ProviderDto>();
-            CreateMap<ProviderDto, ProviderResponse>();
+            CreateMap<ProviderDto, ProviderResponse>().ReverseMap();
         }
     }
 }

@@ -16,6 +16,18 @@
             <param name="services">Коллекция сервисов.</param>
             <param name="configuration">Конфигурация.</param>
         </member>
+        <member name="T:DrillShopApi.DAL.Contexts.DesignTimeDbContextFactory">
+            <summary>
+            Фабрика для создания нового контекста в процессе миграций.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.DAL.Contexts.DesignTimeDbContextFactory.CreateDbContext(System.String[])">
+            <summary>
+            Создание контекста для миграций.
+            </summary>
+            <param name="args">Строковые аршументы миграций.</param>
+            <returns>Контекст.</returns>
+        </member>
         <member name="T:DrillShopApi.DAL.Contexts.DrillShopContext">
             <summary>
             Контекст для работы с данными БД "Магазины сверл".
@@ -284,6 +296,44 @@
             <summary>
             Количество доступных единиц.
             </summary>
+        </member>
+        <member name="T:DrillShopApi.DAL.Fluent.FluentExtentions">
+            <summary>
+            Класс расширения для FluentApi Configs.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.DAL.Fluent.FluentExtentions.BaseEntityWithLinksConfig``3(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{``0},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.IEnumerable{``0}}},System.Linq.Expressions.Expression{System.Func{``2,System.Collections.Generic.IEnumerable{``0}}})">
+            <summary>
+            Конфигурация для слабой сущности.
+            </summary>
+            <typeparam name="T">Слабая сущность.</typeparam>
+            <typeparam name="T1">Сущность-ссылка 1.</typeparam>
+            <typeparam name="T2">Сущность-ссылка 2.</typeparam>
+            <param name="builder">Билдер сущности.</param>
+            <param name="withMany1">Дерево для связи 1.</param>
+            <param name="withMany2">Дерево для связи 2.</param>
+        </member>
+        <member name="T:DrillShopApi.DAL.Fluent.ShopAvailabilityConfig">
+            <summary>
+            Конфигурация миграций для <see cref="T:DrillShopApi.DAL.Domain.ShopAvailability"/>.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.DAL.Fluent.ShopAvailabilityConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{DrillShopApi.DAL.Domain.ShopAvailability})">
+            <summary>
+            Конфигурирование сущности <see cref="T:DrillShopApi.DAL.Domain.ShopAvailability"/>.
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:DrillShopApi.DAL.Fluent.WHAvailabilityConfig">
+            <summary>
+            Конфигурация миграций для <see cref="T:DrillShopApi.DAL.Domain.WHAvailability"/>.
+            </summary>
+        </member>
+        <member name="M:DrillShopApi.DAL.Fluent.WHAvailabilityConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{DrillShopApi.DAL.Domain.WHAvailability})">
+            <summary>
+            Конфигурирование сущности <see cref="T:DrillShopApi.DAL.Domain.WHAvailability"/>.
+            </summary>
+            <param name="builder"></param>
         </member>
         <member name="T:DAL.Mocks.DrillMock">
             <summary>

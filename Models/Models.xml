@@ -49,11 +49,6 @@
             Поставщик.
             </summary>
         </member>
-        <member name="P:DrillShopApi.Models.DTO.DrillDto.ProviderId">
-            <summary>
-            Идентификатор поставщика.
-            </summary>
-        </member>
         <member name="P:DrillShopApi.Models.DTO.DrillDto.DrillType">
             <summary>
             Тип сверла.
@@ -209,6 +204,11 @@
             Тип сверла.
             </summary>
         </member>
+        <member name="P:DrillShopApi.Models.Requests.Drill.CreateDrillRequest.ProviderId">
+            <summary>
+            Идентификатор провайдера.
+            </summary>
+        </member>
         <member name="T:DrillShopApi.Models.Requests.Drill.UpdateDrillRequest">
             <summary>
             Запрос на изменение позиции сверла.
@@ -357,6 +357,21 @@
         <member name="P:DrillShopApi.Models.Responses.DrillResponse.DrillType">
             <summary>
             Тип сверла.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.ProviderName">
+            <summary>
+            Наименование поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.ProviderCity">
+            <summary>
+            Город поставщика.
+            </summary>
+        </member>
+        <member name="P:DrillShopApi.Models.Responses.DrillResponse.ProviderAddress">
+            <summary>
+            Адрес поставщика.
             </summary>
         </member>
         <member name="T:DrillShopApi.Models.Responses.ProviderResponse">

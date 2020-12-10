@@ -18,12 +18,12 @@ namespace DrillShopApi.Models.DTO
         /// Склад.
         /// </summary>
         [Required]
-        public Warehouse Warehouse { get; set; }
+        public WarehouseDto Warehouse { get; set; }
 
         /// <summary>
         /// Сверло.
         /// </summary>
         [Required]
-        public Drill Drill { get; set; }
+        public DrillDto Drill { get; set; }
     }
 }

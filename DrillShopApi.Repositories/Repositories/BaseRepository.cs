@@ -21,9 +21,13 @@ namespace DrillShopApi.Repositories
         where TDto : BaseDto
         where TModel : BaseEntity
     {
-        private readonly IMapper _mapper;
-        protected readonly DrillShopContext Context;
+        public DrillShopContext Context { get; }
+
         protected DbSet<TModel> DbSet => Context.Set<TModel>();
+
+        private readonly IMapper _mapper;
+        
+        
 
         /// <summary>
         /// Инициализирует экземпляр <see cref="BaseRepository{TDto, TModel}"/>.
@@ -59,7 +63,7 @@ namespace DrillShopApi.Repositories
         /// <inheritdoc cref="IGettableById{TDto, TModel}.GetAsync(long)"/>.
         public async Task<TDto> GetAsync(long id)
         {
-            var entity = await DbSet
+            var entity = await DefaultIncludeProperties(DbSet)
                               .AsNoTracking()
                               .FirstOrDefaultAsync(x => x.Id == id);
 
@@ -82,11 +86,17 @@ namespace DrillShopApi.Repositories
         /// <inheritdoc cref="IGettable{TDto, TModel}.GetAsync(CancellationToken)"/>
         public async Task<IEnumerable<TDto>> GetAsync(CancellationToken token = default)
         {
-            var entities = await DbSet.AsNoTracking().ToListAsync();
+            var entities = await DbSet.AsNoTracking().ToListAsync(cancellationToken: token);
 
             var dtos = _mapper.Map<IEnumerable<TDto>>(entities);
 
             return dtos;
         }
+
+        /// <summary>
+        /// Добавляет к выборке связанные параметры.
+        /// </summary>
+        /// <param name="dbSet">Коллекция DbSet репозитория.</param>
+        protected virtual IQueryable<TModel> DefaultIncludeProperties(DbSet<TModel> dbSet) => dbSet;
     }
 }

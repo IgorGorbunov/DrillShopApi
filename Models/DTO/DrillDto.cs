@@ -41,12 +41,7 @@ namespace DrillShopApi.Models.DTO
         /// <summary>
         /// Поставщик.
         /// </summary>
-        public Provider Provider { get; set; }
-
-        /// <summary>
-        /// Идентификатор поставщика.
-        /// </summary>
-        public long ProviderId { get; set; }
+        public ProviderDto Provider { get; set; }
 
         /// <summary>
         /// Тип сверла.

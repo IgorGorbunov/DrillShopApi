@@ -35,5 +35,19 @@
         /// </summary>
         public string DrillType { get; set; }
 
+        /// <summary>
+        /// Наименование поставщика.
+        /// </summary>
+        public string ProviderName { get; set; }
+
+        /// <summary>
+        /// Город поставщика.
+        /// </summary>
+        public string ProviderCity { get; set; }
+
+        /// <summary>
+        /// Адрес поставщика.
+        /// </summary>
+        public string ProviderAddress { get; set; }
     }
 }

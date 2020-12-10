@@ -41,5 +41,10 @@ namespace DrillShopApi.Models.Requests.Drill
         /// Тип сверла.
         /// </summary>
         public string DrillType { get; set; }
+
+        /// <summary>
+        /// Идентификатор провайдера.
+        /// </summary>
+        public long ProviderId { get; set; }
     }
 }

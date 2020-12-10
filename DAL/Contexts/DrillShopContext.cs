@@ -1,4 +1,5 @@
 ﻿using DrillShopApi.DAL.Domain;
+using DrillShopApi.DAL.Fluent;
 using Microsoft.EntityFrameworkCore;
 
 namespace DrillShopApi.DAL.Contexts
@@ -46,6 +47,16 @@ namespace DrillShopApi.DAL.Contexts
         {
             //Database.EnsureDeleted();
             //Database.EnsureCreated();
+        }
+
+        /// <summary>
+        /// Правила создания сущностей.
+        /// </summary>
+        /// <param name="builder">Билдер моделей.</param>
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new ShopAvailabilityConfig());
+            builder.ApplyConfiguration(new WHAvailabilityConfig());
         }
     }
 }

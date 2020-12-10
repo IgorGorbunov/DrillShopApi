@@ -14,6 +14,7 @@ namespace DrillShopApi.Repositories.Bootstrap
             services.AddTransient<IShopRepository, ShopRepository>();
             services.AddTransient<IProviderRepository, ProviderRepository>();
             services.AddTransient<IWarehouseRepository, WarehouseRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
     }
 }

@@ -111,11 +111,11 @@
             Сервис для работы с данными о сверлах.
             </summary>
         </member>
-        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.Repositories.Interfaces.IDrillRepository)">
+        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.Repositories.IUnitOfWork)">
             <summary>
             Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.DrillService"/>.
             </summary>
-            <param name="repository">Репозиторий.</param>
+            <param name="unitOfWork">UnitOfWork.</param>
         </member>
         <member name="M:DrillShopApi.Services.Services.DrillService.CreateAsync(DrillShopApi.Models.DTO.DrillDto)">
             <inheritdoc cref="M:DrillShopApi.Services.Interfaces.ICreatable`1.CreateAsync(`0)"/>

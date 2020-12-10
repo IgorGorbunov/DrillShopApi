@@ -1,4 +1,6 @@
-﻿namespace DrillShopApi.Repositories.Interfaces.CRUD
+﻿using DrillShopApi.DAL.Contexts;
+
+namespace DrillShopApi.Repositories.Interfaces.CRUD
 {
     /// <summary>
     /// Интерфейс репозитория с базовыми CRUD-операциями.
@@ -12,6 +14,6 @@
         IUpdatable<TDto, TModel>,
         IDeletable
     {
-        
+        DrillShopContext Context { get; }
     }
 }

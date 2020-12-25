@@ -111,7 +111,7 @@
             Сервис для работы с данными о сверлах.
             </summary>
         </member>
-        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.Repositories.IUnitOfWork)">
+        <member name="M:DrillShopApi.Services.Services.DrillService.#ctor(DrillShopApi.Repositories.Interfaces.IUnitOfWork)">
             <summary>
             Инициализирует экземпляр <see cref="T:DrillShopApi.Services.Services.DrillService"/>.
             </summary>
